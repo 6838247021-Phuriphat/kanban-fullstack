@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{font-family:'DM Sans',sans-serif;color:#202538;background:#f7f8fc;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+body{margin:0;min-width:320px;min-height:100vh;background:radial-gradient(ellipse at 5% 0%,rgba(220,226,255,.4),transparent 36%),#f7f8fc}
+button,input{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible{outline:3px solid #a9b7ff;outline-offset:2px}
+.app-shell{max-width:1440px;margin:0 auto;padding:0 56px}
+.topbar{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e9ebf3}
+.brand{display:flex;align-items:center;gap:10px;color:#202538;text-decoration:none;font-family:Manrope,sans-serif;font-size:21px;font-weight:800;letter-spacing:-.9px}
+.brand-mark{width:36px;height:36px;display:grid;place-items:center;border-radius:11px;background:#5b64e9;color:white;box-shadow:0 5px 12px #5b64e92b}
+.brand-period{color:#6972ed}
+.topbar-right{display:flex;align-items:center;gap:9px;color:#858ba0;font-size:12px;font-weight:500}
+.live-dot,.total-dot{width:7px;height:7px;border-radius:50%;background:#57bd91;display:inline-block}
+.hero{padding:49px 0 0}
+.eyebrow{display:flex;align-items:center;gap:9px;font-size:10px;font-weight:700;letter-spacing:2px;color:#777f9c}
+.eyebrow-line{width:20px;height:2px;background:#6972ed;border-radius:4px}
+.hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:17px}
+h1,h2,h3,p{margin:0}
+h1{font-family:Manrope,sans-serif;font-size:clamp(35px,4.2vw,55px);line-height:1.12;letter-spacing:-2.5px;font-weight:800;color:#202538}
+h1 span{color:#6972ed}
+.subtitle{margin-top:13px;color:#858ba0;font-size:14px}
+.progress-card{display:flex;align-items:center;gap:12px;background:white;border:1px solid #eceef5;border-radius:14px;padding:15px 18px;min-width:194px;margin-bottom:3px;box-shadow:0 5px 18px #242e5606}
+.progress-icon{display:grid;place-items:center;width:35px;height:35px;border-radius:10px;background:#e8f8f0;color:#36a879}
+.progress-card strong,.progress-card span{display:block}
+.progress-card strong{font-size:12px;font-weight:700}
+.progress-card span{font-size:11px;color:#969bad;margin-top:4px}
+.add-form{display:flex;align-items:center;gap:13px;background:white;border:1px solid #e8eaf3;box-shadow:0 8px 28px #202b5008;border-radius:13px;padding:9px 9px 9px 17px;margin-top:28px;max-width:760px}
+.add-icon{color:#7a83a0;display:flex}
+.add-form input{border:0;outline:none;flex:1;min-width:0;color:#252a3c;font-size:13px;background:transparent}
+.add-form input::placeholder{color:#a3a8b8}
+.add-form button{border:0;border-radius:9px;background:#6069e9;color:white;padding:11px 15px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:12px;font-weight:700;min-width:112px;box-shadow:0 4px 10px #6069e926;transition:background .2s,transform .2s}
+.add-form button:hover:not(:disabled){background:#4f58d7;transform:translateY(-1px)}
+.add-form button:disabled{opacity:.55;cursor:not-allowed}
+.error-banner{margin-top:12px;padding:12px 15px;border:1px solid #f4caca;background:#fff3f2;color:#b33b3b;border-radius:10px;display:flex;align-items:center;justify-content:space-between;font-size:12px}
+.error-banner button{border:0;background:transparent;color:#9b2929;font-weight:700}
+.board-heading{display:flex;align-items:flex-end;justify-content:space-between;margin:47px 0 19px}
+.board-heading h2{font-family:Manrope,sans-serif;font-size:18px;letter-spacing:-.5px;font-weight:800}
+.board-heading p{font-size:12px;color:#969bad;margin-top:5px}
+.task-total{display:flex;align-items:center;gap:8px;border:1px solid #e8eaf2;background:#fff;padding:8px 12px;border-radius:9px;color:#737b93;font-size:11px;font-weight:600}
+.total-dot{background:#6972ed;width:6px;height:6px}
+.board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}
+.column{border:1px solid #e8eaf2;background:#f1f3f9;border-radius:14px;padding:18px 15px 15px;min-height:315px}
+.column-header{display:flex;align-items:center;justify-content:space-between}
+.column-title-wrap{display:flex;align-items:center;gap:8px}
+.status-symbol{width:27px;height:27px;border-radius:8px;display:grid;place-items:center}
+.symbol-todo{background:#e3e7f3;color:#777f9c}
+.symbol-doing{background:#fff0d7;color:#cf9534}
+.symbol-done{background:#dff5e9;color:#2b9d70}
+.column h3{font-family:Manrope,sans-serif;font-size:13px;font-weight:800;letter-spacing:-.2px}
+.count-badge{display:grid;place-items:center;min-width:21px;height:21px;padding:0 5px;border-radius:6px;background:#e4e7f1;color:#68708b;font-size:10px;font-weight:700}
+.column-doing .count-badge{background:#ffedcf;color:#ae7a25}
+.column-done .count-badge{background:#d9f1e5;color:#29865f}
+.column-index{font-size:10px;letter-spacing:1px;color:#b1b6c7;font-weight:700}
+.column-hint{margin:8px 0 16px 35px;font-size:10px;color:#969bad}
+.task-list{display:flex;flex-direction:column;gap:10px}
+.task-card{background:#fff;border:1px solid #e9ebf3;border-radius:11px;padding:13px 13px 10px;box-shadow:0 3px 8px #252c4b05;transition:transform .18s,box-shadow .18s}
+.task-card:hover{transform:translateY(-2px);box-shadow:0 8px 18px #252c4b0b}
+.task-card-top,.task-card-footer{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.task-priority{display:inline-flex;align-items:center;gap:5px;font-size:8px;font-weight:800;letter-spacing:.55px;color:#858ba0}
+.task-priority>span{width:5px;height:5px;border-radius:50%;background:#a1a8bc}
+.priority-doing{color:#c18a2d}.priority-doing>span{background:#e9ae49}
+.priority-done{color:#2d9c70}.priority-done>span{background:#49b988}
+.icon-button{display:grid;place-items:center;width:26px;height:26px;border:0;border-radius:7px;background:transparent;color:#a6abbb;transition:all .15s}
+.delete-button:hover{background:#fff0ef;color:#d84f4f}
+.task-title{font-size:12px;font-weight:600;line-height:1.55;color:#353b50;overflow-wrap:anywhere;padding:6px 0 16px}
+.task-done{color:#9da3b2;text-decoration:line-through}
+.task-card-footer{border-top:1px solid #f0f1f6;padding-top:8px}
+.task-id{font-size:9px;font-weight:700;letter-spacing:.6px;color:#b1b6c5}
+.move-actions{display:flex;gap:4px}
+.move-actions button{width:25px;height:24px;border:1px solid #eceef5;border-radius:6px;background:#fff;color:#7e86a0;font-size:15px;line-height:1;transition:all .15s}
+.move-actions button:hover{border-color:#c6cbff;background:#f1f2ff;color:#5b64e9}
+.empty-state{min-height:112px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:7px;border:1px dashed #d9deeb;border-radius:10px;color:#9aa1b5;font-size:11px}
+.empty-icon{display:grid;place-items:center;width:29px;height:29px;border-radius:9px;background:#e6e9f3;color:#8a91a9}
+.empty-state small{font-size:10px;color:#b0b5c4}
+.add-another{width:100%;display:flex;align-items:center;justify-content:center;gap:7px;margin-top:12px;border:1px dashed #d7dbea;border-radius:9px;padding:10px;background:transparent;color:#8c93aa;font-size:11px;transition:all .15s}
+.add-another:hover{border-color:#aeb5ff;background:#e9ebff;color:#5962df}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:28px 0 30px;margin-top:27px;border-top:1px solid #e9ebf3;color:#a1a6b7;font-size:10px}
+.footer>span:first-child{font-family:Manrope,sans-serif;color:#737b96;font-size:12px;font-weight:800;letter-spacing:-.3px}
+.heart{color:#6972ed}
+.spin{animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:900px){.app-shell{padding:0 28px}.board{gap:12px}.column{padding:14px 11px}.hero-row{align-items:flex-start}.progress-card{min-width:175px}}
+@media(max-width:680px){.app-shell{padding:0 18px}.topbar{height:68px}.topbar-right{font-size:0}.topbar-right .live-dot{width:8px;height:8px}.hero{padding-top:35px}.hero-row{display:block}h1{font-size:41px}.subtitle{max-width:320px;line-height:1.6}.progress-card{margin-top:20px;width:max-content}.add-form{margin-top:20px}.add-form button{min-width:45px;padding:11px}.add-form button span{display:none}.board-heading{margin-top:36px}.board{grid-template-columns:1fr;gap:12px}.column{min-height:180px;padding:16px}.task-list{gap:9px}.footer{flex-wrap:wrap}.footer>span:last-child{width:100%}}
