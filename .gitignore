@@ -32,3 +32,10 @@ backend/.env
 **/.venv/
 **/.wrangler/
 **/dist/
+
+
+# Generated Cloudflare Python build files
+**/.venv-workers/
+**/pyodide-venv/
+**/python_modules/
+backend/pylock.toml

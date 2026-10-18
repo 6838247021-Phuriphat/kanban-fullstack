@@ -5,14 +5,14 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Response, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
-from supabase import Client, create_client
+
 
 load_dotenv()
 
 Status = Literal["todo", "doing", "done"]
 
 
-def get_supabase(request: Request) -> Client:
+def get_supabase(request: Request):
     # Cloudflare Workers supplies secrets through request.scope["env"].
     # Local development falls back to values loaded from backend/.env.
     env = request.scope.get("env")
@@ -27,6 +27,7 @@ def get_supabase(request: Request) -> Client:
             status_code=503,
             detail="Database is not configured. Set SUPABASE_URL and SUPABASE_SECRET_KEY.",
         )
+    from supabase import create_client
     return create_client(url, key)
 
 
